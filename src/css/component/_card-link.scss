@@ -1,0 +1,72 @@
+.c-card-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 24px 16px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  gap: 10px;
+  background: $white;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.05);
+
+  @include min-screen($break_point_min) {
+    padding: 56px;
+  }
+
+  &:not(:first-child) {
+    margin-top: 10px;
+    @include min-screen($break_point_min) {
+      margin-top: 16px;
+    }
+  }
+
+  & .c-more-btn__icon {
+    width: 50px;
+  }
+}
+
+.c-card-link__title {
+  display: flex;
+  color: $gray;
+  font-family: $shippori;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  letter-spacing: 1px;
+
+  flex-direction: column;
+  @include min-screen($break_point_min) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 32px;
+    font-size: 28px;
+  }
+}
+
+.c-card-link__title-text {
+  @include min-screen($break_point_min) {
+    width: 202px;
+  }
+}
+
+.c-card-link__note {
+  margin-top: 10px;
+  color: $gray;
+  font-family: $cormorant;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+  letter-spacing: 0.6px;
+  @include min-screen($break_point_min) {
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
+
+.c-more-btn__icon {
+  @include min-screen($break_point_min) {
+  }
+}

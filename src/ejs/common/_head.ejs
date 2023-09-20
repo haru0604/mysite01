@@ -1,0 +1,141 @@
+<%
+   var _default=json['default'];
+   for ( var key in _default ) {
+   if ( typeof page[key]==='undefined' ) {
+   page[key]=_default[key];
+   }
+   }
+   -%>
+  <!DOCTYPE html>
+  <html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="<%= page['keywords'] %>">
+    <meta name="description" content="<%= page['description'] %>">
+    <title>
+      <%= page['title'] %>
+    </title>
+
+    <link rel="alternate" hreflang="ja" href="<%= page['canonical'] %>">
+
+    <!-- ogp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= page['canonical'] %>">
+    <meta property="og:description" content="<%= page['description'] %>">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="<%= page['title'] %>">
+    <meta property="og:site_name" content="">
+    <!-- /ogp -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.min.js" defer></script>
+  </head>
+
+  <body class="index">
+    <div class="l-wrapper">
+      <div class="l-header__logo l-header">
+        <div class="l-header__inner">
+          <div class="c-logo">
+            <img class="c-logo__img" src="./images/common/logo_pc_01.png" alt="">
+          </div>
+
+          <div class="c-nav js-hamburger">
+            <!-- <div class="c-nav"> -->
+            <span class="c-nav__line"></span>
+            <span class="c-nav__line"></span>
+            <span class="c-nav__line"></span>
+          </div>
+
+          <nav class="l-header__nav">
+            <div class="c-nav-menu">
+              <div class="c-nav-menu__bg">
+                <img src="./images/top/bg_header_pc_01.png" alt="">
+              </div>
+              <div class="c-nav-menu__inner">
+                <ul class="c-nav-menu__items">
+                  <li class="c-nav-menu__item">
+                    <a class="c-nav-menu__link" href="/">
+                      <p class="c-nav-menu__text">
+                        <span class="c-nav-menu__note">ホーム</span>
+                        HOME
+                      </p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                        <path d="M20 7C12.2535 4.91128 6.04648 3.488 0 0C2.37453 3.11393 4.65116 4.9 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                        <path d="M20 7C12.2535 9.08872 6.04648 10.512 0 14C0 14 4.65116 9.1 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="c-nav-menu__item">
+                    <a class="c-nav-menu__link" href="/">
+                      <p class="c-nav-menu__text">
+                        <span class="c-nav-menu__note">私について</span>
+                        ABOUT
+                      </p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                        <path d="M20 7C12.2535 4.91128 6.04648 3.488 0 0C2.37453 3.11393 4.65116 4.9 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                        <path d="M20 7C12.2535 9.08872 6.04648 10.512 0 14C0 14 4.65116 9.1 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="c-nav-menu__item">
+                    <div class="c-nav-menu__link js-accordion">
+                      <p class=" c-nav-menu__text">
+                        <span class="c-nav-menu__note">ブログ</span>
+                        BLOG
+                      </p>
+                      <div class="c-cross">
+                        <span class="c-cross__line"></span>
+                        <span class="c-cross__line"></span>
+                      </div>
+                    </div>
+                    <ul class="c-nav-menu__sub-items">
+                      <li class="c-nav-menu__sub-item"><a href="/" target="_blank">すべての記事</a></li>
+                      <li class="c-nav-menu__sub-item"><a href="/" target="_blank">ひとりごと</a></li>
+                    </ul>
+                  </li>
+                  <li class="c-nav-menu__item">
+                    <a class="c-nav-menu__link" href="/">
+                      <p class="c-nav-menu__text">
+                        <span class="c-nav-menu__note">作品集</span>
+                        WORKS
+                      </p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                        <path d="M20 7C12.2535 4.91128 6.04648 3.488 0 0C2.37453 3.11393 4.65116 4.9 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                        <path d="M20 7C12.2535 9.08872 6.04648 10.512 0 14C0 14 4.65116 9.1 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="c-nav-menu__item">
+                    <a class="c-nav-menu__link" href="/">
+                      <p class="c-nav-menu__text">
+                        <span class="c-nav-menu__note">お問い合わせ</span>
+                        CONTACT
+                      </p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                        <path d="M20 7C12.2535 4.91128 6.04648 3.488 0 0C2.37453 3.11393 4.65116 4.9 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                        <path d="M20 7C12.2535 9.08872 6.04648 10.512 0 14C0 14 4.65116 9.1 4.65116 7C10.6453 7 20 7 20 7Z" fill="#5F6269" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+        </div>
+
+      </div>
+    </div>

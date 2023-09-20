@@ -1,0 +1,7 @@
+@mixin max_width($n) {
+  .u-max-width-#{$n} {
+    max-width: #{$n}px;
+  }
+}
+
+@include max_width(800);

@@ -1,0 +1,26 @@
+.c-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  color: $gray2;
+  font-feature-settings: "halt" on;
+  font-family: Cormorant;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 210%; /* 42px */
+  letter-spacing: 1px;
+  @include min-screen($break_point_min) {
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-more-btn__icon {
+  width: 72px;
+  @include min-screen($break_point_min) {
+  }
+}

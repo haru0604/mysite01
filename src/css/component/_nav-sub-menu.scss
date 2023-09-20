@@ -1,0 +1,24 @@
+.c-nav-sub-menu {
+  margin-top: 20px;
+  margin-left: 26px;
+}
+
+.c-nav-sub-menu__item {
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.c-nav-sub-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: $gray;
+  font-family: $shippori;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.8px;
+}

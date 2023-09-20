@@ -1,0 +1,167 @@
+/* 変数の中身は variables/spacing.scss  */
+/* 改良の余地あり */
+
+.u-mt-space-1 {
+  margin-top: $spacing1;
+}
+.u-mt-space-2 {
+  margin-top: $spacing2;
+}
+.u-mt-space-3 {
+  margin-top: $spacing3;
+}
+.u-mt-space-4 {
+  margin-top: $spacing4;
+}
+.u-mt-space-5 {
+  margin-top: $spacing5;
+}
+.u-mt-space-6 {
+  margin-top: $spacing6;
+}
+.u-mt-space-7 {
+  margin-top: $spacing7;
+}
+.u-mt-space-8 {
+  margin-top: $spacing8;
+}
+.u-mt-space-9 {
+  margin-top: $spacing9;
+}
+
+/* SPとPCで見た目が違う ※適宜追加 */
+
+.u-mt-space-1to2 {
+  margin-top: $spacing1;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing2;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-1to3 {
+  margin-top: $spacing1;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing3;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-2to3 {
+  margin-top: $spacing2;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing3;
+  }
+}
+
+.u-mt-space-2to4 {
+  margin-top: $spacing2;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing4;
+  }
+}
+
+.u-mt-space-2to5 {
+  margin-top: $spacing2;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing5;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-3to4 {
+  margin-top: $spacing3;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing4;
+  }
+}
+
+.u-mt-space-3to5 {
+  margin-top: $spacing3;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing5;
+  }
+}
+
+.u-mt-space-3to6 {
+  margin-top: $spacing3;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing6;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-4to6 {
+  margin-top: $spacing4;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing6;
+  }
+}
+
+.u-mt-space-4to7 {
+  margin-top: $spacing4;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing7;
+  }
+}
+
+.u-mt-space-4to8 {
+  margin-top: $spacing4;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing8;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-5to7 {
+  margin-top: $spacing5;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing7;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-6to8 {
+  margin-top: $spacing6;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing8;
+  }
+}
+
+/* 推奨 */
+.u-mt-space-7to9 {
+  margin-top: $spacing7;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing9;
+  }
+}
+
+.u-mt-space-8 {
+  margin-top: $spacing8;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing10;
+  }
+}
+
+.u-mt-space-9 {
+  margin-top: $spacing9;
+
+  @include min-screen($break_point_pc) {
+    margin-top: $spacing11;
+  }
+}

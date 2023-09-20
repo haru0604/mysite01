@@ -1,0 +1,76 @@
+.c-btn {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  width: 302px;
+  // gap: 16px;
+
+  border-radius: 90px;
+  border: 1px solid $white;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: 0.3s ease;
+
+  @include min-screen($break_point_min) {
+    @include responsiveSpacing(padding-right, $break_point_min, $break_point_wide, 16px, 18px);
+    @include responsiveSpacing(padding-left, $break_point_min, $break_point_wide, 16px, 40px);
+    position: relative;
+    width: auto;
+  }
+
+  &:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.c-btn__text {
+  color: #fff;
+  font-weight: 500;
+  line-height: 140%;
+  @include responsiveSpacing(font-size, $break_point_min, $break_point_wide, 16px, 20px);
+  @include min-screen($break_point_min) {
+  }
+}
+
+.c-btn__icon {
+  margin-left: 16px;
+  svg {
+    // @include responsiveSpacing(width, $break_point_min, $break_point_wide, 34px, 54px);
+    // @include responsiveSpacing(height, $break_point_min, $break_point_wide, 34px, 54px);
+  }
+  @include min-screen($break_point_min) {
+  }
+}
+
+.c-btn--green {
+  background: $gradation-green;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.07);
+  transition: 0.3s ease;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+    background: $gradation-green;
+  }
+
+  .c-btn__icon svg {
+    filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.c-btn--pink {
+  background: $gradation-pink;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.07);
+  transition: 0.3s ease;
+  border: none;
+  &:hover {
+    opacity: 0.8;
+    background: $gradation-pink;
+  }
+
+  .c-btn__icon svg {
+    filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.1));
+  }
+}

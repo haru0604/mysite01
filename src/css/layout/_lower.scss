@@ -1,0 +1,6 @@
+.l-lower {
+  margin-top: $header_height_sp + $spacing6;
+  @include min-screen($break_point_min) {
+    margin-top: $header_height_pc + $spacing8;
+  }
+}

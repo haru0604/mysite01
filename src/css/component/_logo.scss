@@ -1,0 +1,19 @@
+.c-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include min-screen($break_point_min) {
+  }
+}
+
+.c-logo__img {
+  @include responsiveSpacing(max-width, $break_point_min, $break_point_wide, 156px, 241px);
+  @include min-screen($break_point_min) {
+  }
+}
+
+.c-logo__caption {
+  @include min-screen($break_point_min) {
+  }
+}

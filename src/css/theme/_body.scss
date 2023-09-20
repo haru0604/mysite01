@@ -1,0 +1,14 @@
+/* ====================
+body settings
+=======================*/
+
+body {
+  font-family: $font_main;
+  font-size: $font-size-small;
+  letter-spacing: $font_spacing;
+  line-height: $font_line-height-body;
+
+  @include min-screen($break_point_min) {
+    font-size: $font-size-middle;
+  }
+}

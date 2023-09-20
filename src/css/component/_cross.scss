@@ -1,0 +1,21 @@
+.c-cross {
+  width: 20px;
+  height: 1px;
+  position: relative;
+}
+
+.c-cross__line {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: 0.3s all;
+
+  &:nth-child(2) {
+    transform: rotate(90deg);
+  }
+}

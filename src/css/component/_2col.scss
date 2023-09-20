@@ -1,0 +1,33 @@
+.c-2col {
+  @include min-screen($break_point_min) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-2col__item {
+  @include min-screen($break_point_min) {
+    width: calc(50% - (96px / 2));
+    @include responsiveSpacing(padding-left, $break_point_min, 2000px, 16px, 96px);
+    @include responsiveSpacing(padding-right, $break_point_min, 2000px, 16px, 96px);
+  }
+
+  .c-nav-menu__btns {
+    @include min-screen($break_point_min) {
+      display: block !important;
+      margin-top: 40px;
+    }
+  }
+
+  .c-nav-menu__external {
+    display: flex !important;
+
+    @include min-screen($break_point_min) {
+      margin-top: 40px;
+    }
+  }
+
+  .c-sns {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,7 @@
+.l-section {
+  padding: $spacing5 0;
+
+  @include min-screen($break_point_min) {
+    padding: $spacing8 0;
+  }
+}

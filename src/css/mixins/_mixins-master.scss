@@ -1,0 +1,96 @@
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Media queries
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin transition($duration: 0.3s) {
+  transition: all $duration ease;
+}
+
+@mixin flexbox() {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+  @if $orientation == vertical {
+    // vertical
+    background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, $start-color),
+      color-stop(100%, $end-color)
+    );
+    background: -webkit-linear-gradient(top, $start-color 0%, $end-color 100%);
+    background: -o-linear-gradient(top, $start-color 0%, $end-color 100%);
+    background: -ms-linear-gradient(top, $start-color 0%, $end-color 100%);
+    background: linear-gradient(to bottom, $start-color 0%, $end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+  } @else if $orientation == horizontal {
+    // horizontal
+    background: -moz-linear-gradient(left, $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0%, $start-color),
+      color-stop(100%, $end-color)
+    );
+    background: -webkit-linear-gradient(left, $start-color 0%, $end-color 100%);
+    background: -o-linear-gradient(left, $start-color 0%, $end-color 100%);
+    background: -ms-linear-gradient(left, $start-color 0%, $end-color 100%);
+    background: linear-gradient(to right, $start-color 0%, $end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+  } @else {
+    // radial
+    background: -moz-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+    background: -webkit-gradient(
+      radial,
+      center center,
+      0px,
+      center center,
+      100%,
+      color-stop(0%, $start-color),
+      color-stop(100%, $end-color)
+    );
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+    background: -o-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+    background: -ms-radial-gradient(center, ellipse cover, $start-color 0%, $end-color 100%);
+    background: radial-gradient(ellipse at center, $start-color 0%, $end-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+  }
+}
+
+/*
+ 幅に応じて伸び縮みする空白
+ $property 値を指定するプロパティ(margin、paddingなど）
+ $bpLower ブレークポイント（小）
+ $bpUpper ブレークポイント（大）
+ $spMin 値の下限
+ $spMax 値の上限
+ */
+@mixin responsiveSpacing($property, $bpLower, $bpUpper, $spMin, $spMax) {
+  $a: round(calc(100 * ($spMax - $spMin) / ($bpUpper - $bpLower)));
+  $b: round(calc($spMin - ($bpLower / 100) * $a));
+  #{$property}: $spMin; // clamp()に対応してないブラウザ用
+  #{$property}: clamp(#{$spMin}, calc(#{$a}vw + #{$b}), #{$spMax});
+}

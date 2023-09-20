@@ -1,0 +1,51 @@
+.c-slider {
+}
+
+.c-slider__item {
+  &:hover {
+    .c-slider__cover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.c-slider__img-cont {
+  position: relative;
+}
+
+.c-slider__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 20px;
+
+  @include min-screen($break_point_min) {
+    margin-top: 36px;
+  }
+}
+
+.c-slider__cover {
+  transition: 0.5s ease;
+  @include min-screen($break_point_min) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.c-slider__link {
+  display: block;
+  @include min-screen($break_point_min) {
+    margin: 0 calc(48px / 2);
+  }
+}
+
+.c-slider__img-cont {
+  position: relative;
+}

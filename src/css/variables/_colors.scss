@@ -1,0 +1,26 @@
+/*===========
+ Basic color
+===========*/
+$black: #3a3a3a;
+$white: #ffffff;
+$darkgray: #383838;
+$gray: #5f6269;
+$gray2: #565a62;
+$lightgray: #dcdfe7;
+$lightgray2: #f8f8f8;
+$lightgray3: #c6ccdc;
+$lightgray4: #c5c7d3;
+$darkblue: #232d56;
+$navy: #535c76;
+$blue: #1764c0;
+$red: #e8381f;
+
+$gradation-green: var(--gradient--blue, linear-gradient(92deg, #00cdb4 3.21%, #4cdff3 99.3%));
+$gradation-pink: var(--gradient--red, linear-gradient(93deg, #ff5e98 5.63%, #ffce85 99.26%));
+
+/*===========
+ boarder & background
+ color settings
+===========*/
+$maincolor: $blue;
+$subcolor: $white;

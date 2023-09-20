@@ -1,0 +1,220 @@
+/*=========================
+footer
+==========================*/
+.l-footer {
+  // margin-top: 220px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  @include min-screen($break_point_min) {
+    margin-top: 160px;
+  }
+}
+
+.l-footer__menu {
+  position: relative;
+
+  @include min-screen($break_point_min) {
+  }
+}
+
+.l-footer__circle {
+  width: 105%;
+  min-height: 100px;
+  border-radius: 50% / 100% 100% 0 0;
+  background-color: $navy;
+  margin-bottom: -1px;
+  margin-top: 82px;
+
+  transform: translateX(-2.5%);
+
+  @include min-screen($break_point_min) {
+    min-height: 216px;
+    margin-top: 160px;
+  }
+}
+
+.footer-menu {
+  background-color: $navy;
+  padding: 0 24px 48px;
+  @include min-screen($break_point_min) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include responsiveSpacing(padding-left, $break_point_min, $break_point_wide, 24px, 170px);
+    @include responsiveSpacing(padding-right, $break_point_min, $break_point_wide, 24px, 170px);
+    padding-bottom: 114px;
+  }
+}
+
+.footer-menu__head {
+  @include min-screen($break_point_min) {
+  }
+}
+
+.footer-menu__top {
+  @include min-screen($break_point_pc) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include responsiveSpacing(gap, $break_point_min, $break_point_wide, 20px, 40px);
+    max-width: 550px;
+  }
+}
+
+.footer-menu__logo {
+  @include responsiveSpacing(max-width, $break_point_middle, $break_point_wide, 286px, 316px);
+  @include min-screen($break_point_min) {
+  }
+}
+
+.footer-menu__logo-text {
+  margin-top: 16px;
+  color: $white;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+  letter-spacing: 0.7px;
+
+  @include min-screen($break_point_pc) {
+    margin-top: 0;
+    letter-spacing: 0.9px;
+  }
+}
+
+.footer-menu__bottom {
+  margin-top: 64px;
+  @include min-screen($break_point_middle) {
+    display: flex;
+    @include responsiveSpacing(gap, $break_point_middle, $break_point_wide, 16px, 48px);
+  }
+}
+
+.footer-menu__link {
+  color: $white;
+  font-size: 16px;
+  // font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 1.12px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  @include min-screen($break_point_min) {
+    @include responsiveSpacing(font-size, $break_point_middle, $break_point_wide, 14px, 16px);
+  }
+}
+
+.footer-menu__body {
+  margin-top: 40px;
+}
+
+.footer-menu__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  & .c-btn {
+    width: 302px;
+    @include min-screen($break_point_min) {
+      width: auto;
+    }
+  }
+}
+
+.footer-menu__sns {
+  text-align: center;
+  margin-top: 40px;
+
+  .c-sns {
+    justify-content: center;
+  }
+}
+
+.l-footer__copy {
+  border-top: 1px solid $white;
+}
+
+.footer-copy {
+  padding: 30px 24px 14px 24px;
+  text-align: center;
+  background-color: $navy;
+
+  @include min-screen($break_point_min) {
+    padding: 32px 0;
+    @include responsiveSpacing(padding-left, $break_point_min, $break_point_wide, 24px, 170px);
+    @include responsiveSpacing(padding-right, $break_point_min, $break_point_wide, 24px, 170px);
+  }
+}
+
+.footer-copy__head {
+}
+
+.footer-copy__img-cont {
+  text-align: center;
+}
+
+.footer-copy__img {
+  max-width: 200px;
+
+  @include min-screen($break_point_min) {
+    max-width: 254px;
+  }
+}
+
+.footer-copy__text {
+  margin-top: 20px;
+  color: $white;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px; /* 200% */
+  @include min-screen($break_point_min) {
+  }
+}
+
+.footer-copy__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+  gap: 4px;
+
+  @include min-screen($break_point_min) {
+  }
+}
+
+.footer-cppy__body {
+  margin-top: 50px;
+}
+
+.footer-cppy__copy {
+  color: $white;
+  font-size: 10px;
+  font-weight: 500;
+  @include min-screen($break_point_min) {
+    text-align: right;
+  }
+}
+
+.footer-menu__block {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &:not(:first-child) {
+    margin-top: 26px;
+
+    @include min-screen($break_point_min) {
+      margin-top: 0;
+    }
+  }
+
+  @include min-screen($break_point_min) {
+  }
+}

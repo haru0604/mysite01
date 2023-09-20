@@ -1,0 +1,26 @@
+a {
+	text-decoration: none;
+
+	&:visited {
+		// color: inherit;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		// color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

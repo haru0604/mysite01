@@ -1,0 +1,17 @@
+{
+  "default": {
+    "bodyclass": "index",
+    "title": "ライフクリエイト",
+    "description": "",
+    "canonical": "",
+    "keywords": ""
+  },
+
+  "home": {
+    "bodyclass": "index",
+    "title": "",
+    "description": "",
+    "canonical": "",
+    "keywords": ""
+  }
+}
